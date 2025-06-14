@@ -1,8 +1,10 @@
+// App.tsx
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import OurServicesPage from './pages/OurServicesPage';
-import ContactUsPage from './pages/ContactUsPage'; // assuming you added this
+import ImpactPage from './pages/ImpactPage'; 
+import ContactUsPage from './pages/ContactUsPage';
 
 function App() {
   return (
@@ -12,10 +14,9 @@ function App() {
       <Route path="/services" element={<OurServicesPage />} />
       <Route path="/contact" element={<ContactUsPage />} />
       
-      {/* Optional: make homepage default */}
+     
       <Route path="/" element={<HomePage />} />
     </Routes>
   );
 }
-
 export default App;

@@ -1,21 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 export default function Navbar() {
-  return (
-    <nav style={styles.navbar}>
-      <div style={styles.container}>
-        <div style={styles.logo}>🌟 LOGO</div>
-        <div style={styles.navLinks}>
-          <a href="#about" style={styles.link}>About Us</a>
-          <a href="#services" style={styles.link}>Our Services</a>
-          <a href="#impact" style={styles.link}>Impact</a>
-          <a href="#contact" style={styles.link}>Contact Us</a>
+    return (
+      <nav style={styles.navbar}>
+        <div style={styles.container}>
+          <div style={styles.logo}>🌟 LOGO</div>
+          <div style={styles.navLinks}>
+            <Link to="/about" style={styles.link}>About Us</Link>
+            <Link to="/services" style={styles.link}>Our Services</Link>
+            <Link to="/impact" style={styles.link}>Impact</Link>
+            <Link to="/contact" style={styles.link}>Contact Us</Link>
+          </div>
         </div>
-      </div>
-    </nav>
-  );
-}
-
+      </nav>
+    );
+  }
 const styles: { [key: string]: React.CSSProperties } = {
   navbar: {
     position: 'fixed',

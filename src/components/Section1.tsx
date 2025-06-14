@@ -3,15 +3,21 @@ import React from 'react';
 export default function Section1() {
   return (
     <section style={styles.section}>
-      <div style={styles.content}>
-        <h1 style={styles.heading}>Empowering Businesses with AI</h1>
-        <p style={styles.description}>
-          We specialize in harnessing the power of artificial intelligence to help businesses become more efficient,
-          data-driven, and future-ready. Our innovative tools and platforms are designed to simplify decision-making,
-          optimize operations, and unlock new growth opportunities.
-        </p>
+      <div style={styles.innerContainer}>
+        <div style={styles.content}>
+          <h1 style={styles.heading}>Empowering Businesses with AI</h1>
+          <p style={styles.description}>
+            We specialize in harnessing the power of artificial intelligence to help businesses become more efficient,
+            data-driven, and future-ready. Our innovative tools and platforms are designed to simplify decision-making,
+            optimize operations, and unlock new growth opportunities.
+          </p>
+        </div>
       </div>
-      <button style={styles.button} onClick={() => alert("Navigating to Discover Page")}>
+
+      <button
+        style={styles.button}
+        onClick={() => alert('Navigating to Discover Page')}
+      >
         Discover More
       </button>
     </section>
@@ -21,17 +27,21 @@ export default function Section1() {
 const styles: { [key: string]: React.CSSProperties } = {
   section: {
     height: '100vh',
+    scrollSnapAlign: 'start',
     background: 'linear-gradient(to bottom right, #f5f7fa, #c3cfe2)',
+    position: 'relative',
     display: 'flex',
-    flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '4rem',
-    position: 'relative',
+    padding: '2rem',
+    boxSizing: 'border-box',
+  },
+  innerContainer: {
+    maxWidth: '800px',
     textAlign: 'center',
   },
   content: {
-    maxWidth: '800px',
+    marginBottom: '2rem',
   },
   heading: {
     fontSize: '2.8rem',
@@ -55,6 +65,7 @@ const styles: { [key: string]: React.CSSProperties } = {
     border: 'none',
     borderRadius: '8px',
     cursor: 'pointer',
-    transition: 'background-color 0.3s',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+    transition: 'background-color 0.3s ease',
   },
 };
